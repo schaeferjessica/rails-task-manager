@@ -3,8 +3,8 @@
 <% @tasks.each do |task| %>
   <ul>
     <li>
-      <%= check_box_tag 'activated[]' -%>
-      <%= task.title %>
+      <%= check_box_tag(:one, value = 1) %>
+      <%= link_to task.title, task_path(task.id) %>
     </li>
   </ul>
 <% end %>
